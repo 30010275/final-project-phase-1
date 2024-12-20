@@ -2,7 +2,7 @@
 
 const apiURL = 'https://itunes.apple.com/search?term=radiohead&entity=album'; // URL for Radiohead albums
 
-//initializing an empty arrsy to store allAlbums data globaly
+//initializing an empty arrsy to store allAlbums data 
 let allAlbums = [];
 //Defines an asynchronous function to fetch music data from the API. async allows you to use await inside the function for asynchronous operations.
 
@@ -25,7 +25,7 @@ async function fetchMusicData() {
 function displayMusicData(albums) {
     const container = document.getElementById('music-data');
     container.innerHTML = ''; // Clear loading message
-
+//IF ALBUM NOT FOUND DISPLAY NO ALBUM FOUND
     if (albums.length === 0) {
         container.innerHTML = 'No albums found.';
         return;
